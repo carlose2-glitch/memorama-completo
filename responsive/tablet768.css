@@ -1,3 +1,7 @@
+:root{
+    --w: calc(96%/4);/*ancho de las tarjetas*/
+   /* --h: calc(80%/4);alto de las tarjetas*/
+}
 header{
 
     height: 39vh;
@@ -14,7 +18,7 @@ header .pesebre{
     padding-right: 0px;
 }
  main{
-    height: 130vh;
+    height: 150vh;
 }
 
 main .tablero{

@@ -1,5 +1,5 @@
 :root{
-    --w: calc(70vw/4);/*ancho de las tarjetas*/
+    --w: calc(97%/4);/*ancho de las tarjetas*/
    /* --h: calc(80%/4);alto de las tarjetas*/
 }
 header{
@@ -15,13 +15,14 @@ header .pesebre{
     height: 33vh;
 }
 main{
+    display: flex;
     height: 180vh;
+
+    /* height: 180vh; */
 }
 
-main .tablero{
+/* main .tablero{
     width: 71.5%;
     height: 80%;
-}
-.tarjeta{
-    width: var(--w);
-}
+} */
+

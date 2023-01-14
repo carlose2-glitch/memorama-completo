@@ -9,8 +9,8 @@
 }
 
 :root{
-    --w: calc(40vw/3);/*variable sobre el ancho de las tarjetas*/
-   /* --h: calc(80%/4);alto de las tarjetas*/
+    --w: calc(98%/4);/*variable sobre el ancho de las tarjetas*/
+    --h: calc(100%/4);
 }
 *{
     margin: 0;
@@ -32,14 +32,17 @@ body{
     z-index: 1;
     background: rgba(0, 0, 0, 0.5);
 }
+.modal .intro{
+    max-width: 550px;
+}
 .modal .intro img{
-    width: 40vw;
+    width: 100%;
 }
 .boton-sombra{
     cursor:pointer;
     background: #d77c0e;
-    width: 15vw;
-    height: 8vh;
+    width: 180px;
+    height: 50px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -47,17 +50,17 @@ body{
 }
 .boton-sombra .boton{
     background: #ed921f;
-    width: 15vw;
+    width: 200px;
     border-radius: 20px;
     display: flex;
-    height: 6vh;
+    height: 40px;
     position: relative;
     top: -7px;
     justify-content: center;
     align-items: center;
 }
 .boton-sombra .boton p{
-    font-weight: bold;
+    font-weight: 700;
     color: white;
     font-size: 28px;
 }
@@ -281,36 +284,34 @@ body{
 header{
     display: flex;
     width: 100%;
-    height: 25vh;
-    
 }
+
 header .escuela{
     width: 28%;
-    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
+    padding: 15px 25px 15px 25px;
 }
 header .escuela img{
     width: 90%;
+    max-width: 350px;
 }
 
 header .pesebre {
     background-color: #e6f9f4;
     width: 72%;
-    height: 25vh;
+    padding: 15px 25px 15px 25px;
 }
 .pesebre h1{
     font-size: 31px;
     color: #5fa3a5;
     font-family: Arlon, sans-serif;
-    padding-left: 24px;
 
 }
 .pesebre p{
     padding-top: 10px;
-    padding-left: 24px;
     padding-right: 40px;
     font-family:'Source Sans Pro', sans-serif;
     font-size: 20px;
@@ -322,6 +323,7 @@ header .pesebre {
 /*menu tarjetas*/
 
 main{
+    max-height: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,34 +332,49 @@ main{
     height: 150vh;
     background-color: #F2D272;
 }
-main .tablero{
-    width: 55%;
+main .relleno{
+
+    max-width: 900px;
+    width: 100%;
+    /* height: 100%; */
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+main .relleno .tablero{
+
+    width: 80%;
     height: 80%;
-    /* background-color: blue;  */
+    background-color: blue;  
     display: inline-block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
 .tarjeta{
-    cursor: pointer;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
     display: inline-block;
     width: var(--w);
-    /* height: var(--h); */
+    /* height: var(--h);  */
 
 }
 .card{
     position: relative;
     transform-style: preserve-3d;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 }
 
 .card .front,
 .card .back{
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     backface-visibility: hidden;
 }
 .card .back{
@@ -367,7 +384,9 @@ main .tablero{
     transform: rotateY(180deg);
 }
 
- .con_la{
+ 
+
+.con_la{
     margin-left: 10px;
     display: flex;
     position: fixed;

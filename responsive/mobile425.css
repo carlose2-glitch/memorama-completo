@@ -1,6 +1,6 @@
 :root{
-    --w: calc(100vw/5);
-    --h: calc(100vh/5)
+    --w: calc(95.2%/4);
+    /* --h: calc(100vh/5) */
 }
 
 .intro{
@@ -97,9 +97,9 @@ main .tablero{
     position: relative;
 
 }
-.tarjeta{
+/* .tarjeta{
     width: var(--w);
-}
+} */
 
 .didactica p{
     text-align: center;
