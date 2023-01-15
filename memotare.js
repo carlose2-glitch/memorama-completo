@@ -51,6 +51,7 @@ let persons = [baltazar, gaspar, jose, maria, melchor, mula, nino, pastor];
 /* obtengo la clase del texto de la segunda pantalla modal*/
 let text = document.querySelector('.text');
 
+const sonido = document.getElementById('sonido');
 const borrar = document.querySelector('.card_left');//creo la constante para poder eliminar las tarjetas cubiertas
 const boton = document.querySelector('.boton-sombra');//creo la constante boton para luego hacer el llamado con el click
 const modal = document.querySelector('.modal');//creo constante para modal principal
@@ -80,7 +81,7 @@ let cubiertas = [baltazarh,gasparh,joseh,mariah,melchorh,mulah,jesush,pastorh];
 boton.addEventListener('click',()=>{
 cuerpo.style.overflow = "auto";
 cuerpo.removeChild(modal);
-
+sonido.innerHTML = '<audio src="https://www.escueladidactica.com/navidad/2022/audio/intro.mp3" autoplay></audio>';
 })
 
 /*llamado a la funcion generar tablero */
