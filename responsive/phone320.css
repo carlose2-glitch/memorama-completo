@@ -21,3 +21,6 @@ main {
     position: relative;
     top: 51px;
 }
+.card_right .adornos_superiores p {
+    left: 21px;
+}

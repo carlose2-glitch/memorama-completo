@@ -17,7 +17,13 @@ main{
 
     /* height: 180vh; */
 }
-
+.card_right .adornos_superiores p{
+    margin-left: 22%;
+}
+.card_right .parte_inferior .med .b-medio, .card_right .parte_inferior .finalizar .b-medio {
+    position: relative;
+    top: 44px;
+}
 /* main .tablero{
     width: 71.5%;
     height: 80%;
