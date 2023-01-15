@@ -7,11 +7,11 @@
     font-family: Arlon;
     src: url('./fonts/ArlonSemiBold-DEMO.otf');
 }
-
+/* 
 :root{
-    --w: calc(98%/4);/*variable sobre el ancho de las tarjetas*/
+    --w: calc(98%/4);variable sobre el ancho de las tarjetas
     --h: calc(100%/4);
-}
+} */
 *{
     margin: 0;
     padding: 0;
@@ -33,10 +33,14 @@ body{
     background: rgba(0, 0, 0, 0.5);
 }
 .modal .intro{
+    width: 100%;
     max-width: 550px;
+    display: flex;
+    justify-content: center;
 }
 .modal .intro img{
     width: 100%;
+    animation: bounceIn 1.5s backwards;
 }
 .boton-sombra{
     cursor:pointer;
@@ -283,29 +287,36 @@ body{
 /*cabecera*/
 header{
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
 header .escuela{
     width: 28%;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 25px 15px 25px; 
 }
+
 header .escuela img{
     width: 90%;
     max-width: 350px;
 }
 
+
 header .pesebre {
     background-color: #e6f9f4;
     width: 72%;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 25px 15px 25px; 
 }
 .pesebre h1{
+    line-height: 1.2;
     font-size: 31px;
+    font-weight: bold;
     color: #5fa3a5;
     font-family: Arlon, sans-serif;
 
@@ -334,7 +345,7 @@ main{
 }
 main .relleno{
 
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
     /* height: 100%; */
 
@@ -348,7 +359,8 @@ main .relleno .tablero{
     width: 80%;
     height: 80%;
     
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -360,7 +372,7 @@ main .relleno .tablero{
     margin-right: auto;
     cursor: pointer;
     display: inline-block;
-    width: var(--w);
+    width: 25%;
     /* height: var(--h);  */
 
 }
@@ -433,9 +445,9 @@ footer .base .left p{
     display: inline-block;
     color: #161b1c;
 }
-footer .base .left img{
-    padding-left: 5px;
-    padding-top: 7px;
+
+footer .base .left p img{
+    vertical-align: middle;
     width: 150px;
 }
 
@@ -509,4 +521,52 @@ footer .base .right .contactanos p{
     }
 
 }
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    }
+
+    0% {
+        -webkit-transform: scale3d(.3, .3, .3);
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+
 
